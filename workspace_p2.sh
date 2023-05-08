@@ -1,18 +1,5 @@
 #!/bin/bash
 
-# 执行更新
-sudo apt update
-
-sudo apt install vim
-sudo apt install curl
-sudo apt install git
-
-# 下载zsh
-sudo apt install zsh
-
-# 下载Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # 安装插件
 cd ~/.oh-my-zsh/custom/plugins
 sudo apt-get install autojump
@@ -47,9 +34,6 @@ alias nv3='export CUDA_VISIBLE_DEVICES=3'
 export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891
 EOL
 
-# 激活zsh新配置
-source ~/.zshrc
-
 # 下载https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh到~/software文件夹下
 mkdir -p ~/software
 curl -L -o ~/software/Miniconda3-latest-Linux-x86_64.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -58,6 +42,3 @@ curl -L -o ~/software/Miniconda3-latest-Linux-x86_64.sh https://repo.anaconda.co
 echo 'set-option -g default-shell /bin/zsh' >> ~/.tmux.conf
 echo 'set -g mouse on' >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
-
-# 下载Trash-Cli
-sudo apt install trash-cli
