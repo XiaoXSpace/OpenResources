@@ -6,6 +6,7 @@ sudo apt update
 sudo apt install vim
 sudo apt install curl
 sudo apt install git
+sudo apt install tmux
 
 # 下载zsh
 sudo apt install zsh
